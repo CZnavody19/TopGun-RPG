@@ -11,7 +11,7 @@ public class CoinTest {
 	public void copperCoinTest() {
 		Copper coin = new Copper(10);
 
-		assert coin.getValue() == 10;
+		assert coin.getValue() * coin.getCount() == 10;
 		assert coin.toString().equals("Copper coin [10] (10)");
 	}
 
@@ -19,7 +19,7 @@ public class CoinTest {
 	public void silverCoinTest() {
 		Silver coin = new Silver(10);
 
-		assert coin.getValue() == 100;
+		assert coin.getValue() * coin.getCount() == 100;
 		assert coin.toString().equals("Silver coin [10] (10)");
 	}
 
@@ -27,7 +27,7 @@ public class CoinTest {
 	public void goldCoinTest() {
 		Gold coin = new Gold(10);
 
-		assert coin.getValue() == 1000;
+		assert coin.getValue() * coin.getCount() == 1000;
 		assert coin.toString().equals("Golden coin [10] (10)");
 	}
 }
